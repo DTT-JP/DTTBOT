@@ -1,6 +1,10 @@
 import asyncpg
 import os
+from dotenv import load_dotenv
 from typing import List, Any, Optional, Dict
+
+# .envファイルを読み込み
+load_dotenv()
 
 # 環境変数からDB接続URLを取得
 DATABASE_URL: Optional[str] = os.getenv("DATABASE_URL")
