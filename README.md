@@ -8,6 +8,7 @@
 
 ## セットアップ手順
 [Ubuntu/Debian](#debain系の導入手順)
+
 [Arch](#arch系の導入手順)
 
 #### Debain系の導入手順
