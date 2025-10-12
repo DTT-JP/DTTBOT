@@ -20,7 +20,7 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 
 # 読み込むコグファイルのリスト
 INITIAL_EXTENSIONS = [
-    'cogs.UUID',
+    'cogs.rogging', # メッセージログを取得し、処理するcogs
 ]
 
 # 起動時の処理
