@@ -1,0 +1,7 @@
+/.env
+/venv
+/venv/*
+/cogs/__pycache__
+/cogs/__pycache__/*
+/__pycache__
+/__pycache__/*
