@@ -12,6 +12,7 @@ TOKEN = os.getenv('DISCORD_BOT_TOKEN')
 intents = discord.Intents.default()
 intents.message_content = True 
 intents.members = True
+intents.voice_states = True
 
 # BOTの初期化
 bot = commands.Bot(command_prefix='!', intents=intents)
