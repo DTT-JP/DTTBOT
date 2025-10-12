@@ -5,8 +5,10 @@ import asyncio
 from dotenv import load_dotenv
 import database
 
+# .envを読み込み
 load_dotenv() 
 
+# envからbotトークン取得
 TOKEN = os.getenv('DISCORD_BOT_TOKEN') 
 
 # インテントの設定
@@ -30,6 +32,8 @@ async def on_ready():
 
     # データベースに接続
     await database.connect_to_db()
+    # たりないテーブルを作成
+    await database.recreate_tables()
     
     # 起動時にすべてのコグを読み込む
     for cog in INITIAL_EXTENSIONS:

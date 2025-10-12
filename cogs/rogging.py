@@ -49,13 +49,17 @@ class Logging(commands.Cog):
         # サーバーがないDMメッセージは無視
         if after.guild is None:
             return
-
+        
+        # サーバーIDを取得
+        say_guild_id = after.guild
+        
         try:
             # データベースのログを更新し、編集前後の情報を取得
             log_details = await database.update_log(
                 after.id, 
                 after.content
             )
+
             # 取得したlog_detailsを使って、監査ログチャンネルなどに通知の例
             # print(f"メッセージ編集: U:{log_details['user_id']} | 旧: {log_details['content_old']} -> 新: {log_details['content_new']}")
         except Exception as e:
