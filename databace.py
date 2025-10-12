@@ -1,5 +1,3 @@
-# database.py
-
 import asyncpg
 import os
 from typing import List, Any, Optional, Dict
@@ -8,7 +6,7 @@ from typing import List, Any, Optional, Dict
 DATABASE_URL: Optional[str] = os.getenv("DATABASE_URL")
 
 if not DATABASE_URL:
-    print("❌ 環境変数 'DATABASE_URL' が設定されていません。")
+    print("E:not found 'DATABASE_URL'")
 
 POOL: Optional[asyncpg.Pool] = None
 LogDetails = Dict[str, Any]
@@ -25,12 +23,12 @@ async def connect_to_db() -> bool:
 
     try:
         POOL = await asyncpg.create_pool(DATABASE_URL)
-        print("✅ データベース接続プールが正常に確立されました。")
+        print("Connnected to the database successfully.")
         await _initialize_tables()
-        print("✅ 全テーブルの初期化が完了しました。")
+        print("Database tables initialized.")
         return True
     except Exception as e:
-        print(f"❌ データベース接続エラー: {e}")
+        print(f"E: Detabace Accsess Err {e}")
         POOL = None
         return False
 
