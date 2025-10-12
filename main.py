@@ -3,6 +3,7 @@ from discord.ext import commands
 import os
 import asyncio
 from dotenv import load_dotenv
+import database
 
 load_dotenv() 
 
@@ -19,15 +20,16 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 
 # 読み込むコグファイルのリスト
 INITIAL_EXTENSIONS = [
-    'cogs.admin',
-    'cogs.developer',
-    'cogs.kabayanagi',
+    'cogs.UUID',
 ]
 
 # 起動時の処理
 @bot.event
 async def on_ready():
     print(f'Logging in: {bot.user}')
+
+    # データベースに接続
+    await database.connect_to_db()
     
     # 起動時にすべてのコグを読み込む
     for cog in INITIAL_EXTENSIONS:
@@ -48,3 +50,7 @@ if TOKEN is not None:
     bot.run(TOKEN)
 else:
     print("E: Failed to find Discord-Token in .env file.")
+
+@bot.event
+async def on_disconnect():
+    await database.close_db_connection()
