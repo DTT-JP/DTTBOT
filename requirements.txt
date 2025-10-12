@@ -1,4 +1,0 @@
-python-dotenv
-discord.py>=2.0.0
-psycopg2-binary
-asyncpg
