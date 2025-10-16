@@ -1,4 +1,4 @@
-# 自己紹介君 Ver 2 Githubリポジトリ
+# DTTBOT Githubリポジトリ
 # **まだリリースされていない未完成なプロジェクトです**
 
 **[English](README.en.md)** | **[简体中文](README.zh-CN.md)** | **[Ferur](README.Ferur.md)**
