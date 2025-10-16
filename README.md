@@ -24,11 +24,11 @@
 
 * プロジェクトをクローン
 
-  `git clone https://github.com/DTT-JP/zikosyoukai.git && rm -rf zikosyoukai/.git`
+  `git clone https://github.com/DTT-JP/DTTBOT.git && rm -rf DTTBOT/.git`
 
 * 作業フォルダに移動
 
-  `cd zikosyoukai`
+  `cd DTTBOT`
 
 * PostgreSQLが動いているか確認
 
