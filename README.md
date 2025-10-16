@@ -1,4 +1,5 @@
 # 自己紹介君 Ver 2 Githubリポジトリ
+# **まだリリースされていない未完成なプロジェクトです**
 
 **[English](README.en.md)** | **[简体中文](README.zh-CN.md)**
 
